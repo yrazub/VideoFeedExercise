@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  color: #7E7E7B;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -39,6 +40,10 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* Main marketing message and sign up button */
@@ -80,4 +85,58 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.video-feed {
+  text-align: center;
+}
+
+.video-item {
+  width: 415px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 0;
+}
+
+.video-item {
+  margin-top: 20px;
+}
+
+.video-item-header {
+  height: 42px;
+  padding: 0 20px;
+}
+
+.video-item h2, .video-item-views {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 42px;
+}
+
+.video-item h2 {
+  float: left;
+}
+
+.video-item-views {
+  float: right;
+}
+
+.loader {
+  position: relative;
+}
+
+.loader:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  background-image: url('/images/loading2.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
 }

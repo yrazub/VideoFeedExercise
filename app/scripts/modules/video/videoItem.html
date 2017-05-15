@@ -1,0 +1,11 @@
+<div class="video-item-header">
+    <h2>{{model.title}}</h2>
+    <span class="video-item-views">{{model.views}} views</span>
+</div>
+
+<iframe ng-if="url && model.source=='youtube'" width="100%" height="275" src="{{url}}" style="border:none;overflow:hidden"></iframe>
+
+<iframe ng-if="url && model.source=='facebook'" width="100%" height="275" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+    src="{{url}}" ></iframe>
+
+<video width="100%" ng-if="model.source=='url'" id="sampleMovie" src="{{url}}" preload controls></video>

@@ -8,10 +8,12 @@
  * Controller of the videoFeedExerciseApp
  */
 angular.module('videoFeedExerciseApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$rootScope', '$location', function ($rootScope, $location) {
+
+    $rootScope.currentItem = $location.$$path.replace('/', '');
+
+    $rootScope.$on('$routeChangeSuccess', function(){
+      $rootScope.currentItem = $location.$$path.replace('/', '');
+    });
+
+  }]);

@@ -26,7 +26,7 @@ angular
         templateUrl: 'views/main.html'
       })
       .when('/video', {
-        templateUrl: 'scripts/modules/video/videoFeed.html',
+        templateUrl: 'scripts/modules/video/feed/videoFeed.html',
         controller: 'VideoFeedCtrl'
       })
       .when('/about', {

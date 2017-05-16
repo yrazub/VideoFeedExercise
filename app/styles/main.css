@@ -140,3 +140,14 @@ h1 {
   background-position: center;
   content: '';
 }
+
+.video-container {
+  width: 415px;
+  height: 276px;
+}
+
+.video-error {
+  color: red;
+  margin: 20px 0;
+  display: inline-block;
+}

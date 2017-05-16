@@ -3,7 +3,7 @@
 angular.module('video')
   .controller('VideoFeedCtrl', ['$scope', 'VideoFeed', '$timeout', function ($scope, VideoFeed, $timeout) {
       $scope.items = [];
-      $scope.loading = true;
+      //$scope.loading = true;
 
       function load(){
           let p = VideoFeed.get(function(response){
@@ -12,7 +12,6 @@ angular.module('video')
 
           p.finally(function(){
             $timeout(function(){
-              $scope.loading = false;
             }, 1000);
           });
       }

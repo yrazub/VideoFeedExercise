@@ -3,7 +3,9 @@
 angular.module('video', [])
     .factory('config', function(){
         return {
-            videoFeedUrl: 'https://cdn.playbuzz.com/content/feed/items'
+            videoFeedUrl: 'https://cdn.playbuzz.com/content/feed/items',
+            videoWidth: 415,
+            videoHeight: 276
         };    
     })
     

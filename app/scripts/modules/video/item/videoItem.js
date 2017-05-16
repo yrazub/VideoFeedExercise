@@ -6,7 +6,7 @@ angular.module('video')
             scope: {
                 model: '='
             },
-            templateUrl: '/scripts/modules/video/videoItem.html',
+            templateUrl: '/scripts/modules/video/item/video.html',
             controller: function($scope, $sce) {
                 let url;
                 if ($scope.model.source === 'youtube') {

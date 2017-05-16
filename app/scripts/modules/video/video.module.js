@@ -4,7 +4,7 @@ angular.module('video', [])
     .factory('config', function(){
         return {
             videoFeedUrl: 'https://cdn.playbuzz.com/content/feed/items',
-            videoWidth: 415,
+            videoWidth: 414,
             videoHeight: 276
         };    
     })

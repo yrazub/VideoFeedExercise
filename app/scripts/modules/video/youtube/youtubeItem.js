@@ -21,7 +21,6 @@ angular.module('video')
                         videoId: videoId,
                         events: {
                             onReady: onReady,
-                            //onStateChange: onPlayerStateChange,
                             onError: onPlayerError
                         }
                     });
@@ -31,13 +30,11 @@ angular.module('video')
                 }
 
                 function onReady(){
-                    console.log('ready');
                     $scope.loading = false;
                     $scope.$digest();
                 }
 
                 function onPlayerError(){
-                    console.log('error loading video');
                     $scope.videoError = 'Youtube video is missing';
                     $scope.$digest();
                 }

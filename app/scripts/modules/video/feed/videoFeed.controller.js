@@ -3,17 +3,17 @@
 angular.module('video')
   .controller('VideoFeedCtrl', ['$scope', 'VideoFeed', '$timeout', function ($scope, VideoFeed, $timeout) {
       $scope.items = [];
-      //$scope.loading = true;
 
       function load(){
-          let p = VideoFeed.get(function(response){
-            $scope.items = response.items;
-          }).$promise;
-
-          p.finally(function(){
-            $timeout(function(){
-            }, 1000);
-          });
+          VideoFeed.get(
+            function(response){
+              $scope.items = response.items;
+            },
+            function(error){
+              console.error(error);
+              $scope.error = 'Could not load feed';
+            }
+          );
       }
 
       load();

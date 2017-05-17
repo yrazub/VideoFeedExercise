@@ -11,6 +11,7 @@ angular.module('video')
             templateUrl: '/scripts/modules/video/url/urlItem.html',
             controller: function($scope, $sce) {
                 $scope.url = $sce.trustAsResourceUrl($scope.videoUrl);
+                $scope.videoHeight = config.videoHeight;
             }
         }
     }]);

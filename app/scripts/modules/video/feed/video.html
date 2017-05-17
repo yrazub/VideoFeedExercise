@@ -1,0 +1,15 @@
+<div class="video-item-header">
+    <h2>{{model.title||defaultTitle}}</h2>
+    <span class="video-item-views">{{model.views}} views</span>
+</div>
+
+<div ng-if="missingData" class="video-error">{{videoError}}</div>
+
+<div ng-if="!missingData">
+    <div ng-if="model.source=='youtube'" vfe-youtube-video video-id="model.videoId" class="video-container"></div>
+
+    <div ng-if="model.source=='facebook'" vfe-facebook-video video-id="model.videoId" class="video-container"></div>
+
+    <div ng-if="model.source=='url'" vfe-url-video video-url="model.url" class="video-container"></div>
+</div>
+
